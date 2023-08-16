@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 ubuntu_release=`lsb_release -s -r`
-sudo apt-get install -y \
+apt-get install -y \
     automake \
     cmake \
     libgmp-dev \
@@ -33,4 +33,4 @@ sudo ldconfig
 bash ../ci/install-nnpy.sh
 
 cd ..
-sudo rm -rf $tmpdir
+rm -rf $tmpdir
